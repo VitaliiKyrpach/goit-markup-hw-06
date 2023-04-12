@@ -465,6 +465,7 @@ body {
   fill: currentColor;
 }
 .subscribe .text {
+  display: block;
   color: var(--third-text-color);
   font-weight: 500;
   margin-bottom: 16px;
@@ -474,9 +475,11 @@ body {
   height: 40px;
   padding: 8px 16px;
   margin-right: 24px;
+  color: var(--third-text-color);
   background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 4px;
+  outline: none;
 }
 .sub-mail::placeholder {
   font-weight: 400;
@@ -484,6 +487,9 @@ body {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #ffffff;
+}
+.sub-mail:focus {
+  border-color: var(--logo-text-color);
 }
 .sub.button {
   display: flex;
@@ -519,7 +525,9 @@ body {
   transform: translate(-50%, -50%) scale(0);
 }
 .modal-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-bottom: 24px;
   width: 24px;
@@ -528,6 +536,13 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+}
+.modal-btn:active {
+  background-color: var(--button-active);
+  color: #ffffff;
+}
+.modal-btn .icon {
+  fill: currentColor;
 }
 .is-hidden {
   opacity: 0;
@@ -546,10 +561,24 @@ body {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  color: var(--secondary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.label-text {
   color: #8e8f99;
 }
 .label:not(:first-child:last-child) {
   letter-spacing: 0.01em;
+}
+.input-wrap {
+  position: relative;
+}
+.input-wrap .icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: currentColor;
 }
 .input {
   display: block;
@@ -561,6 +590,13 @@ body {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.label:focus-within {
+  color: var(--logo-text-color);
+}
+.input:focus {
+  border-color: var(--logo-text-color);
 }
 .area {
   height: 120px;
