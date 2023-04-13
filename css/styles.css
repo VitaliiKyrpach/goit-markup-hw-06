@@ -430,9 +430,6 @@ body {
 .content .text {
   color: var(--footer-text-color);
 }
-.smedia {
-  margin-right: 80px;
-}
 .smedia .text {
   color: var(--third-text-color);
   font-weight: 500;
@@ -463,6 +460,9 @@ body {
 }
 .smedia-link .icon {
   fill: currentColor;
+}
+.subscribe {
+  margin-left: auto;
 }
 .subscribe .text {
   display: block;
@@ -607,11 +607,28 @@ body {
 .area::placeholder {
   color: rgba(46, 47, 66, 0.4);
 }
-.checkbox-wrap {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+.checkbox {
   margin-bottom: 24px;
+}
+.checkbox .label {
+  display: flex;
+  align-items: center;
+}
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  fill: transparent;
+}
+.check-input:checked + .label .check {
+  background-color: var(--button-active);
+  border: none;
+  fill: #f4f4fd;
 }
 .modal .button {
   display: block;
